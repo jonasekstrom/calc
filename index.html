@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:og="http://ogp.me/ns#">
+<head>
+  <title>Vue Calculator</title>
+  <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  
+
+  <link rel="stylesheet" href="app.css">
+  <link href='https://fonts.googleapis.com/css?family=Orbitron' rel='stylesheet' type='text/css'>
+</head>
+<body>
+  <div id="app">
+    <div class="container" id="app">
+      <div class="calculator well">
+        <div class="screen">
+          <input class="sum animated" @keyup="checkKeyUp" v-model="inputClear"/>          
+        </div>
+        <span class="text-right">{{historyText}}</span>
+        <div class="buttons" @click="calculate($event.target.value)">
+          <button class="red long buttons-left" value="ac">AC</button>
+          <button value='÷'>÷</button>
+          <button value="x">x</button>
+          <button class="buttons-left" value="7">7</button>
+          <button value="8">8</button>
+          <button value="9">9</button>
+          <button value="-">-</button>
+          <button class="buttons-left" value="4">4</button>
+          <button value="5">5</button>
+          <button value="6">6</button>
+          <button value="+">+</button>
+          <button class="buttons-left" value="1">1</button>
+          <button value="2">2</button>
+          <button value="3">3</button>
+          <button class="equal" value="=">=</button>
+          <button class="long buttons-left" value="0">0</button>
+          <button value=".">.</button>
+          
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="app.js"></script>
+</body>
+</html>
